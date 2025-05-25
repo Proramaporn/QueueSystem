@@ -2,24 +2,25 @@ const API_URL = 'http://localhost:8080/api';
 
 export async function takeQueue() {
     const res = await fetch(`${API_URL}/queue/take`, {
+        method: 'POST',
         credentials: 'include',
-    });
-    return res.json();
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    );
+    if (!res.ok) throw new Error("Failed to fetch queue");
+
+    const data = await res.json();
+    return data.queue;
 }
 
 export async function getCurrentQueue() {
     const res = await fetch(`${API_URL}/queue/current`, {
         credentials: 'include',
     });
-    return res.json();
-}
-
-export async function nextQueue() {
-    const res = await fetch(`${API_URL}/queue/next`, {
-        method: 'POST',
-        credentials: 'include',
-    });
-    return res.json();
+    const data = await res.json();
+    return data.current;
 }
 
 export async function resetQueue() {

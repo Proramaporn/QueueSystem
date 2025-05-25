@@ -26,11 +26,13 @@ func CookieMiddleware() gin.HandlerFunc {
 func TakeQueue(c *gin.Context) {
 	userID, _ := c.Cookie("user_id")
 	q := service.AssignQueue(userID)
+	fmt.Println("Assigned Queue:", q)
 	c.JSON(http.StatusOK, gin.H{"queue": q})
 }
 
 func GetCurrentQueue(c *gin.Context) {
 	q := service.GetCurrentQueue()
+	fmt.Println("Current Queue:", q)
 	c.JSON(http.StatusOK, gin.H{"current": q})
 }
 

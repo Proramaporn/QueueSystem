@@ -34,6 +34,7 @@ func AssignQueue(userID string) string {
 	q := storage.GetLastQueue()
 	next := nextCode(q)
 	storage.SetLastQueue(next)
+	storage.SetCurrentQueue(next)
 	storage.SetUserQueue(userID, next)
 	return next
 }

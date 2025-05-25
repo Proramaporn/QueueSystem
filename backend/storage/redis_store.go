@@ -2,6 +2,7 @@ package storage
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/redis/go-redis/v9"
 )
@@ -16,6 +17,7 @@ func GetLastQueue() string {
 	if err != nil {
 		return "A0"
 	}
+	fmt.Println("Last Queue:", q)
 	return q
 }
 
@@ -38,7 +40,9 @@ func SetCurrentQueue(q string) {
 
 func GetCurrentQueue() string {
 	q, err := rdb.Get(ctx, "current_queue").Result()
+
 	if err != nil {
+		fmt.Println("Error getting current queue:", err)
 		return "A0"
 	}
 	return q

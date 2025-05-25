@@ -7,14 +7,12 @@ export default function IT051() {
     const navigate = useNavigate();
 
     const handleTakeQueue = async () => {
-        // const data = await takeQueue();
-        // localStorage.setItem('myQueue', JSON.stringify(data));
+        const data = await takeQueue();
+        localStorage.setItem('queueNumber', data);
         navigate('/IT-05-2');
     };
 
     const handleClearQueue = async () => {
-        // const data = await takeQueue();
-        // localStorage.setItem('myQueue', JSON.stringify(data));
         navigate('/IT-05-3');
     };
 
