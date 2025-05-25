@@ -4,7 +4,7 @@ This is a simple queue ticketing system with:
 
 - **Backend:** Golang + Gin + Redis  
 - **Frontend:** React  
-- **Queue data stored** in Redis and queue number saved in localStorage  
+- **Queue data stored** in Redis 
 
 ---
 
