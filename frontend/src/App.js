@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import IT051 from "./IT-05-1";
-import IT052 from "./IT-05-2";
-import IT053 from "./IT-05-3";
+import IT051 from "./pages/IT-05-1";
+import IT052 from "./pages/IT-05-2";
+import IT053 from "./pages/IT-05-3";
 
 function App() {
   return (

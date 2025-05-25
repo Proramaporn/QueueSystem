@@ -1,0 +1,46 @@
+.page {
+    /* border: 1px solid #000; */
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: #00a650;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-button {
+    background-color: #3266cc;
+    color: white;
+    padding: 40px 80px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.small-button {
+    background-color: #3266cc;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
